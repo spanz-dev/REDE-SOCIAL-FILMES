@@ -155,10 +155,11 @@ def listar_usuarios():
 
     return jsonify(lista)
 
+@app.route('/feed')
+def feed_page():
+    return render_template("index3.html")
+
 if __name__ == "__main__":
     criar_tabela()
     app.run(debug=True)
 
-@app.route('/feed')
-def feed_page():
-    return render_template("index3.html")
