@@ -81,6 +81,7 @@ document.getElementById("formLogin").addEventListener("submit", async function(e
     if (resultado.ok) {
         mensagem.className = "text-success text-center";
         mensagem.innerText = resultado.mensagem;
+        window.location.href = "/feed"
 
         // Depois você pode redirecionar para outra página:
         // window.location.href = "/home";

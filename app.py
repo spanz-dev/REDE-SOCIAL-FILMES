@@ -104,7 +104,7 @@ def api_login():
         SELECT id, usuario, email, senha
         FROM clientes
         WHERE email = %s
-    """, (email,))
+    """, (email,senha))
 
     cliente = cursor.fetchone()
 
@@ -134,7 +134,7 @@ def listar_usuarios():
     cursor = conexao.cursor()
 
     cursor.execute("""
-        SELECT id, usuario, email
+        SELECT id, usuario, email , senha
         FROM clientes
         ORDER BY id
     """)
@@ -158,3 +158,7 @@ def listar_usuarios():
 if __name__ == "__main__":
     criar_tabela()
     app.run(debug=True)
+
+@app.route('/feed')
+def feed_page():
+    return render_template("index3.html")
