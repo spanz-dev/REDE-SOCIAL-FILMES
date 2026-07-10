@@ -28,16 +28,16 @@
 
                 <h2 class="text-center mb-4" id="titulo">Login</h2>
 
-                <form action="/login" method="POST">
+                <form id="formLogin" action="/api/login" method="POST">
 
                     <h6>E-mail</h6>
                     <div class="input-group mb-3 mx-auto">
-                        <input class="form-control meu-input" placeholder="@gmail.com" type="text" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        <input class="form-control meu-input" placeholder="@gmail.com" type="text" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="email">
                     </div>
 
                     <h6>Senha</h6>
                     <div class="input-group mb-3 mx-auto">
-                        <input class="form-control meu-input" placeholder="Senha" type="password" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        <input class="form-control meu-input" placeholder="Senha" type="password" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="senha">
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -54,7 +54,9 @@
 
                 </form>
 
-                <p class="text-center">Ainda nao tem sua conta? <a href="index2.html">Cadastrar-se</a></p>
+                <p id="mensagemLogin"></p>
+
+                <p class="text-center">Ainda nao tem sua conta? <a href="/cadastro">Cadastrar-se</a></p>
 
             </div>
         </div>

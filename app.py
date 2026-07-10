@@ -32,12 +32,17 @@ def criar_tabela():
 
 @app.route("/")
 def login_page():
-    return render_template("index2.html")
+    return render_template("index.html")
 
 
 @app.route("/login")
-def cadastro_page():
+def login_page_alt():
     return render_template("index.html")
+
+
+@app.route("/cadastro")
+def cadastro_page():
+    return render_template("index2.html")
 
 
 @app.route("/api/cadastro", methods=["POST"])

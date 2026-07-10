@@ -28,7 +28,7 @@
 
                 <h2 class="text-center mb-4" id="titulo">Cadastro</h2>
 
-                <form action="/cadastrar" method="POST">
+                <form id="formCadastro" action="/api/cadastro" method="POST">
 
                     <h6>Usuario</h3>
                     <div class="input-group mb-3 mx-auto">
@@ -51,7 +51,9 @@
 
                 </form>
 
-                <p>Ja Tem Uma Conta?<a href="index.html">Logar</a></p>
+                <p id="mensagemCadastro"></p>
+
+                <p>Ja Tem Uma Conta?<a href="/login">Logar</a></p>
 
             </div>
         </div>
