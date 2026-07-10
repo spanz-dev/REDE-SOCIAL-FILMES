@@ -104,7 +104,7 @@ def api_login():
         SELECT id, usuario, email, senha
         FROM clientes
         WHERE email = %s
-    """, (email,senha))
+    """, (email,))
 
     cliente = cursor.fetchone()
 
@@ -162,4 +162,3 @@ def feed_page():
 if __name__ == "__main__":
     criar_tabela()
     app.run(debug=True)
-
